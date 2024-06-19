@@ -310,14 +310,15 @@
             navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
         }
 
-        function downloadApp() {
+        document.getElementById('downloadAppButton').addEventListener('click', function (e) {
+            e.preventDefault();
             const link = document.createElement('a');
-            link.href = '/app/app3154855-1e3xtj (1).apk'; // Reemplaza con la URL de descarga real
+            link.href = 'app3154855-1e3xtj (1).apk'; // Reemplaza con la URL de descarga real
             link.download = 'app3154855-1e3xtj (1).apk'; // Nombre del archivo a descargar
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
-        }
+        });
     </script>
 </body>
 </html>
